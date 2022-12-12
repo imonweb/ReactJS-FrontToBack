@@ -9,14 +9,14 @@ const person = {
 }
 
 person.name = 'Jack'
-console.log(person)
+// console.log(person)
 
-console.log(name);
+// console.log(name);
 
 const nums = [1,2,3,4,5];
 nums.push(5);
 
-console.log(nums)
+// console.log(nums)
 
 // Arrow functions
 
@@ -25,7 +25,7 @@ console.log(nums)
 // }
 
 const sayHello = () => {
-  console.log('Hello');
+  // console.log('Hello');
 }
 sayHello();
 
@@ -48,14 +48,14 @@ const people = [
 
 const people2 = people.filter(person => person.id !== 2);
 
-console.log(people2)
+// console.log(people2)
 
 // Spread
 const arr = [1,2,3];
 const arr2 = [...arr, 4];
 const arr3 = [...arr.filter(num => num !== 2)];
 
-console.log(arr3);
+// console.log(arr3);
 
 const person1 = {
   name: 'Jonis',
@@ -67,4 +67,35 @@ const person2 = {
   email: 'jonu@gmail.com'
 }
 
-console.log(person2);
+// console.log(person2);
+
+// Destructuring
+const profile = {
+  nameDes: 'John Doe',
+  address: {
+    street: '10 Downing St.',
+    city: 'London'
+  },
+  hobbies: ['movies', 'music']
+}
+
+const { nameDes, address, hobbies } = profile;
+
+// console.log(nameDes, address, hobbies[0]);
+const { street } = profile.address;
+// console.log(street);
+
+ 
+
+// Classes
+class Person {
+  constructor(nameA, ageA) {
+    this.nameA = nameA;
+    this.ageA = ageA;
+  }
+}
+
+const personA = new Person('Josh', 12);
+const personB = new Person('Sonya', 14);
+
+console.log(personA.nameA);
