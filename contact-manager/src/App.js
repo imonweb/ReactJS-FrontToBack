@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import React, { Component } from 'react';
 import Contact from './components/Contact';
@@ -9,8 +9,9 @@ class App extends Component {
 
     return (
       <div className="App">    
-        <Header />
-        <Contact />
+        <Header branding="Contact Manager"/>
+        <Contact name="John Doe" email="johndoe@gmail.com" phone="5555-555-555"/>
+        <Contact name="Jane Doe" email="janedoe@gmail.com" phone="5555-666-666"/>
       </div>
     );
   }
