@@ -93,9 +93,34 @@ class Person {
     this.nameA = nameA;
     this.ageA = ageA;
   }
+
+  greet(){
+    return `Hello, my name is ${this.nameA} and I am ${this.ageA}`;
+  }
 }
 
 const personA = new Person('Josh', 12);
 const personB = new Person('Sonya', 14);
 
 console.log(personA.nameA);
+console.log(personB.greet());
+
+// Subclasses
+class Customer extends Person {
+  constructor(nameA, ageA, balance){
+    super(nameA, ageA);
+    this.balance = balance;
+  }
+
+  info(){
+    return `${this.nameA} owes £${this.balance}.00`;
+  }
+}
+
+const customer1 = new Customer('Kevin', 18, 600);
+
+console.log(customer1.nameA);
+console.log(customer1.info());
+
+// Modules
+
