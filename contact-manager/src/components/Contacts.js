@@ -24,6 +24,10 @@ class Contacts extends Component {
           phone: '555-777-7777'
         }
       ]
+    };
+
+    deleteContact = () => {
+      console.log(123);
     }
  
 
@@ -36,6 +40,7 @@ class Contacts extends Component {
       <Contact 
         key={contact.id}
         contact={contact} 
+        deleteClickHandler={this.deleteContact}
       />
     ))}
     </React.Fragment>
